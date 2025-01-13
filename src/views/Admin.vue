@@ -16,6 +16,7 @@
               class="btn-close btn-close-white"
               data-bs-dismiss="modal"
               aria-label="Close"
+              id="closeModal"
           ></button>
         </div>
         <div class="modal-body bg-light p-4 rounded">
@@ -211,7 +212,6 @@
 
 <script>
 import { mapState, mapGetters } from "vuex";
-import * as bootstrap from "bootstrap";
 
 export default {
   data() {
@@ -261,14 +261,9 @@ export default {
         alert("Curso agregado correctamente.");
         this.limpiarFormulario();
 
-        const modalElement = document.getElementById("addCourseModal");
-        const modalInstance = bootstrap.Modal.getInstance(modalElement);
-        if (modalInstance) {
-          modalInstance.hide();
-        }
-        document.querySelectorAll(".modal-backdrop").forEach((backdrop) => {
-          backdrop.remove();
-        });
+        const closeModal = document.getElementById("closeModal");
+        closeModal.click()
+
       } catch (error) {
         alert("Error al agregar el curso. Por favor, inténtalo nuevamente.");
         console.error("Error en agregarCurso del componente:", error);
@@ -276,7 +271,6 @@ export default {
     },
     limpiarFormulario() {
       this.nuevoCurso = {
-        id: null,
         nombre: "",
         img: "",
         cupos: 0,

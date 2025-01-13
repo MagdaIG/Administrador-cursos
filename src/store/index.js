@@ -48,7 +48,6 @@ export default createStore({
         },
         async agregarCurso({ commit }, curso) {
             try {
-
                 const { data } = await api.post("/cursos", curso);
                 commit("agregarCurso", data);
                 return true;

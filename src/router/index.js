@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from "vue-router";
 // Importación de las vistas
 import Home from "../views/Home.vue";
 import Admin from "../views/Admin.vue";
-import AddCourse from "../views/AddCourse.vue";
 import EditCourse from "../views/EditCourse.vue";
 import CourseDetail from "../views/CourseDetail.vue";
 
@@ -19,12 +18,6 @@ const routes = [
         name: "Admin",
         component: Admin,
         meta: { title: "Administración - Gestión de Cursos" },
-    },
-    {
-        path: "/add-course",
-        name: "AddCourse",
-        component: AddCourse,
-        meta: { title: "Agregar Curso - Gestión de Cursos" },
     },
     {
         path: "/edit-course/:id",
