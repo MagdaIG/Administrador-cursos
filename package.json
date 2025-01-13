@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "render-serve": "npm run build && json-server --static dist --port 10000 db.json",
+    "render-serve": "json-server --static dist --port 10000 db.json",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
