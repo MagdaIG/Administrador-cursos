@@ -80,6 +80,7 @@ Este proyecto fue desarrollado por Magdalena Inalaf G. como parte de un ejercici
 
 - **Email:** magda.inalaf@gmai.com
 - **GitHub:** [MagdaIG](https://github.com/MagdaIG)
+- **Demo:** https://administrador-cursos.onrender.com/
 
 ---
 
